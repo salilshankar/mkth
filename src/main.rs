@@ -9,7 +9,7 @@ fn main() -> Result<(), &'static str> {
     let content = 
             match fs::read_to_string(file_path) {
                 Ok(file) => file,
-                Err(error) => panic!("File open failed with error: {}", error)
+                Err(error) => format!("Error: {}", error)
             };
     println!("{}", content);
 
