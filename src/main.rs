@@ -8,7 +8,7 @@ fn main() -> Result<(), &'static str> {
         return Err("File not provided");
     }
     let file_path = parse_input(&args); 
-    let content = parse_file::file_content(file_path);
+    let content = parse_file::file(file_path);
     
     println!("{content}");
 
