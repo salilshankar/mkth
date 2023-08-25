@@ -7,7 +7,7 @@ fn main() -> Result<(), &'static str> {
     if args.len() == 1 {    
         return Err("File not provided");
     }
-    let file_path = parse_input(&args); 
+    let file_path = parse_std_input(&args); 
     let content = parse_file::file(file_path);
     
     println!("{content}");
@@ -15,7 +15,7 @@ fn main() -> Result<(), &'static str> {
     Ok(())
 }
 
-fn parse_input(args: &[String]) -> &str {
+fn parse_std_input(args: &[String]) -> &str {
     let file_path = &args[1];
 
     file_path
