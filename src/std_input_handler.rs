@@ -5,7 +5,7 @@ pub fn get_file_path() -> Result<String, String> {
     if args.len() == 1 {
         return Err("No file provided at stdin.".to_string());
     }
-    let file_path = &args[1].clone();
+    let file_path = &args[1];
 
-    Ok(String::from(file_path))
+    Ok(file_path.to_string())
 }
