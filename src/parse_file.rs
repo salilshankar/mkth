@@ -15,5 +15,5 @@ fn read_file(path: String) -> String {
     match fs::read_to_string(path) {
       Ok(file) => file,
       Err(error) => format!("Error: {error}")
-  }
+    }
 }
